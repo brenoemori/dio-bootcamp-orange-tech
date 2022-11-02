@@ -1,2 +1,3 @@
-# dio-bootcamp-orange-tech
-Repositório de estudos do Bootcamp Orange Tech + da DIO
+# Repositório de estudos do Bootcamp Orange Tech + da DIO
+
+Neste repositório irei deixar toda a minha trilha de estudos do Bootcamp
