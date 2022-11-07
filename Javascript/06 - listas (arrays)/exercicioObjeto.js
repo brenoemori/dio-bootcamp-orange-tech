@@ -1,6 +1,6 @@
 const notas = [];
 
-notas.push(5);
+notas.push(10);
 notas.push(10);
 notas.push(10);
 
