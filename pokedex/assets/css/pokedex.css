@@ -30,6 +30,12 @@
 .fairy {background-color: #f9aec7;}
 
 
+section .title {
+    font-size: 3rem;
+    text-align: center;
+    font-family: pokemon solid;
+}
+
 .pokemon {
     display: flex;
     flex-direction: column;
