@@ -160,7 +160,7 @@
 .pokeDetailsUnit .discription {
     display: flex;
     justify-content: space-evenly;
-    height: 32vh;
+    height: 35vh;
 }
 
 .pokeDetailsUnit .discription .aboutList {
