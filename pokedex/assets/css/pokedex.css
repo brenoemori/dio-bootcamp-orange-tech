@@ -36,6 +36,10 @@ section .title {
     font-family: pokemon solid;
 }
 
+a {
+    text-decoration: none;
+}
+
 .pokemon {
     display: flex;
     flex-direction: column;
@@ -63,6 +67,7 @@ section .title {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin: 0;
 }
 
 .pokemon .detail .types {

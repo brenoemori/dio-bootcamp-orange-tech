@@ -9,6 +9,25 @@ let offset = 0;
 
 
 function convertPokemonToli(pokemon) {
+    return `<a href="pokeDetail.html">
+        <li class="pokemon ${pokemon.type}">
+                    <span class="number">#${pokemon.number}</span>
+                    <span class="name">${pokemon.name}</span>
+    
+                    <div class="detail">
+                        <ol class="types">
+                            ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                        </ol>
+    
+                        <img src="${pokemon.photo}"
+                             alt="${pokemon.name}">
+                    </div>
+    
+                </li></a>
+        `
+}
+
+function convertPokemonToDetail(pokemon) {
     return `
         <li class="pokemon ${pokemon.type}">
                     <span class="number">#${pokemon.number}</span>
@@ -26,6 +45,8 @@ function convertPokemonToli(pokemon) {
                 </li>
         `
 }
+
+
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
