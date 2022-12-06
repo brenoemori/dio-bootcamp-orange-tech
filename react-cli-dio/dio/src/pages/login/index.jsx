@@ -8,27 +8,35 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
+
+import { api } from '../../services/api'
 import { Column, Container, SubTitleLogin, EsqueciText, Row, Title, TitleLogin, Wrapper  } from'./styles';
 
 const schema = yup.object({
-    email: yup.string().email('email não é válido').required(),
-    password: yup.string().min(3, 'No mínimo 3 caracteres').required(),
+    email: yup.string().email('email não é válido').required('Campo obrigatório'),
+    password: yup.string().min(3, 'No mínimo 3 caracteres').required('Campo obrigatório'),
   }).required();
 
 
 
 const Login = () => {
     const navigate = useNavigate();
-    const { control, handleSubmit, formState : { errors, isValid } } = useForm({
+
+    const { control, handleSubmit, formState : { errors } } = useForm({
         resolve: yupResolver(schema),
-        mode: 'onChange'
+        mode: 'onChange',
     });
  
-
-    console.log(isValid, errors)
-
-    const onSubmit = data => console.log(data);
-
+    const onSubmit = formData => {
+        try {
+            const { data } = api.get(`users?email=${formData.email}&senha=${formData.password}`);
+            console.log(`returno api`, api)
+        }catch{
+            alert('Houve um erro, tente novamente.')
+        }
+    };
+    
+    console.log(errors)
 
     const handleClickLogIn = () => {
         navigate('/Feed')
@@ -47,9 +55,9 @@ const Login = () => {
                     <TitleLogin>Faça seu cadastro</TitleLogin>
                     <SubTitleLogin>Faça seu login e make the change._</SubTitleLogin>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <Input name="email" control={control} placeholder="E-mail" />
-                        <Input name="password" control={control} placeholder="Senha" type="password" />
-                        <Button name="password" title="Entrar" variant= "secondary" type= "submit" />
+                        <Input name="email" errorMessage={errors?.email?.message} control={control} placeholder="E-mail" />
+                        <Input name="password" errorMessage={errors?.password?.message} control={control} placeholder="Senha" type="password" />
+                        <Button name="password" title="Entrar" variant= "secondary" type= "submit" handleClickLogIn/>
                     </form>
                     <Row>
                         <EsqueciText>Esqueci minha senha</EsqueciText>
