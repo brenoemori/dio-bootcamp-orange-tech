@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: #373737;
+}
+.repositories::-webkit-scrollbar-track{
+  width: 0.25rem;
+}
+.repositories::-webkit-scrollbar-thumb{
+  width: 0.25rem;
+  background-color: white;
+}
