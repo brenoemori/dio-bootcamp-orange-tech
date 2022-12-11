@@ -1,0 +1,47 @@
+let N = 4;
+let fatorial = N;
+
+
+for(cont=1;cont<N; cont++){
+          
+        console.log(`${fatorial} contador = ${cont}`)
+        if (cont = 1) {
+            fatorial=fatorial*(N-cont) 
+        } else if(cont = 2){
+            fatorial=fatorial/(N-cont)
+        } else if(cont = 3){
+            fatorial=fatorial+(N-cont)
+        } else if(cont = 4){
+            fatorial=fatorial-(N-cont)
+        } else if(cont = 5){
+            fatorial=fatorial*(N-cont)
+        } else if(cont = 6){
+            fatorial=fatorial/(N-cont)
+        } else if(cont = 7){
+            fatorial=fatorial+(N-cont)
+        } else if(cont = 8){
+            fatorial=fatorial-(N-cont)
+        } else if(cont = 9){
+            fatorial=fatorial*(N-cont)
+        } else if(cont = 10){
+            fatorial=fatorial/(N-cont)
+        } else if(cont = 11){
+            fatorial=fatorial+(N-cont)
+        } else if(cont = 12){
+            fatorial=fatorial-(N-cont)
+        } else if(cont = 13){
+            fatorial=fatorial*(N-cont)
+        } else if(cont = 14){
+            fatorial=fatorial/(N-cont)
+        } else if(cont = 15){
+            fatorial=fatorial+(N-cont)
+        } else {
+            break
+        }
+        console.log('passou aqui')
+}
+
+
+
+
+console.log(N+"! = "+fatorial)

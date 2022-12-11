@@ -1,0 +1,16 @@
+let N = 4;
+let fatorial = N;
+
+
+for(cont=1;cont<N; cont++){
+    fatorial=fatorial*(N-cont)
+    if (N = fatorial*(N-cont)) {
+        console.log('0')
+    }
+}
+
+
+
+console.log(N+"! = "+fatorial)
+
+

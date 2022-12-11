@@ -1,0 +1,24 @@
+let N = 4;
+let fatorial = N;
+
+
+for(cont=1;cont<N; cont++){
+          
+        console.log(`${fatorial} contador = ${cont}`)
+        if (cont = 1) {
+            fatorial=fatorial*(N-cont) 
+        } else if(cont = 2){
+            cont ++
+            fatorial=fatorial/(N-cont)
+            console.log('to aq')
+        } else if(cont = 3){
+            fatorial=fatorial+(N-cont)
+        } else if(cont = 4){
+        }
+        console.log('passou aqui')
+}
+
+
+
+
+console.log(N+"! = "+fatorial)
